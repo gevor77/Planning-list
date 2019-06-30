@@ -1,0 +1,40 @@
+<h4>Edit List</h4>
+<form [formGroup]="updateList" class="example-form">
+    <mat-form-field class="example-full-width">
+      <input formControlName="title" matInput placeholder="Title">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput formControlName="description" placeholder="Description">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Place Name" formControlName="placeName">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput formControlName="address" placeholder="Address">
+    </mat-form-field>
+  
+      <input type="hidden" formControlName="id" placeholder="Address">
+  
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" formControlName="date" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="0">
+        Yes
+      </mat-option>
+      <mat-option value="1">
+        No
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+    <button mat-raised-button style="margin-right: 25px;" color="primary" mat-button (click)="update(updateList.value)">Edit List</button>
+    <button mat-raised-button routerLink="/lists">Lists</button>  
+  </form>

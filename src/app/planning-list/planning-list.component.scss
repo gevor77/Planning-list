@@ -1,0 +1,35 @@
+li {
+	list-style:none;
+}
+.view span {
+	margin-right:25px;
+}
+table {
+  width: 100%;
+  tr:hover{
+	  background: rgb(153, 152, 152);
+  }
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.left {
+	float: right;
+	mat-icon{
+		cursor: pointer;
+		margin-right:25px;
+	}
+}
+.list-page{
+	padding: 0 23px;
+	h4 {
+		button{
+			float: right;
+		}
+	}
+}
+.example-test{
+	color: red;
+}
